@@ -9,6 +9,7 @@ export const AppContext = createContext();
 
 function App() {
   const [nav, SetNav] = useState(false);
+  
   return (
     <AppContext.Provider value={{nav, SetNav}}>
       <div className="App">
