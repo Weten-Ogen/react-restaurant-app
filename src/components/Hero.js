@@ -2,18 +2,18 @@ import React from 'react'
 
 const Hero = () => {
   return (
-    <div className='relative max-w-[1640px] mx-auto p-4'>
-        <div className='max-h-[500px] relative'>
-          <div className='max-h-[500px] bg-black/40 absolute w-full h-full text-white/80 capitalize flex flex-col justify-center'>
-            <h1 className='px-4 text-4xl sm:text-5xl md:text-7xl'>the 
-            <span className='text-orange-500 px-2'>best</span></h1>
-          <h1 className='px-4 text-4xl sm:text-5xl md:text-7xl'>foods <span className='text-orange-500 px-2'>delivered</span></h1></div>
-          <img 
-          className='max-h-[500px] w-full object-cover'
-          src="burger.jpg" 
-          alt="hero_image"/>
+
+    <div className='max-w-[1640px] mx-auto p-4'>
+      <div className='max-h-[500px] relative'>
+        <div className='absolute max-h-[500px] w-full h-full text-slate-400 bg-black/50 text-4xl capitalize flex flex-col justify-center'>
+            <h1 classsName="px-3" >the <span className='text-orange-500'>best</span></h1>
+            <h1 classsName="px-3">food <span className='text-orange-500'>delivered</span></h1>
         </div>
-        
+        <img
+        className='max-h-[500px] object-cover w-full' 
+        src='fries.jpg' 
+        alt='fries'/>
+      </div>
     </div>
   )
 }
