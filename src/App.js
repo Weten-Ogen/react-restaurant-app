@@ -1,28 +1,26 @@
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom'
 import { Home } from './pages';
 import { Navbar } from './components';
-import { useState } from 'react';
-import { createContext } from 'react';
+
+import {createContext,useState } from 'react';
 
 
 export const AppContext = createContext();
 
 function App() {
-  const [showNav , SetShowNav] = useState(false);
-
-  
+  const [nav, SetNav] = useState(false);
   return (
-    <AppContext.Provider value={{showNav, SetShowNav}}>
+    <AppContext.Provider value={{nav, SetNav}}>
       <div className="App">
-        <Router>
+      <Router>
           <Navbar/>
-          <Routes>
-              <Route path='/' element={<Home/>}/>
-          </Routes>
-        </Router>
+        <Routes>
+            <Route path='/' element={<Home/>}/>
+        </Routes>
+      </Router>
     </div>
     </AppContext.Provider>
-    
+
   );
 }
 
