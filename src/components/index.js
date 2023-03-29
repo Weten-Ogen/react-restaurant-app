@@ -1,5 +1,7 @@
 import Navbar from "./Navbar";
 import Button from "./Button";
+import SideBar from "./SideBar";
+import Hero from "./Hero";
 
 
 
@@ -11,4 +13,4 @@ import Button from "./Button";
 
 
 
-export {Navbar,Button}
+export {Navbar,Button, SideBar,Hero}
