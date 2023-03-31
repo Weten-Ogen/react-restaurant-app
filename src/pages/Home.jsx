@@ -1,4 +1,4 @@
-import { Hero ,HeadlineCard} from "../components"
+import { Hero ,HeadlineCard,Food} from "../components"
 
 
 const Home = () => {
@@ -11,6 +11,9 @@ const Home = () => {
       <HeadlineCard para={"new restaurant"} amount={"added daily"} image={'jollof.jpg'}/>
       <HeadlineCard para={"we deliver desserts too"} amount={"tasty treats"} image={'burger1.jpg'}/>
       </div>
+      
+      <Food/>
+     
     </div>
   )
 }
