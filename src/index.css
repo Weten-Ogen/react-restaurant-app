@@ -19,3 +19,81 @@ li {
 a{
   text-decoration:none;
 }
+.hamburgerMenu{
+  @apply
+  lg:hidden
+   mx-2 
+    text-lg 
+   text-white 
+   sm:text-lg
+   absolute 
+   left-0
+   top-0
+}
+
+.foodnav{
+  @apply 
+    rounded-full
+    px-4 py-2
+    border 
+    border-orange-500
+}
+.foodouterdiv{
+  @apply 
+  max-w-[1640px] 
+  my-5 
+  mx-auto  
+  grid 
+  sm:grid-cols-2 
+  md:grid-cols-3 
+  gap-4 
+  md:gap-8 pt-4
+}
+
+.searchBar{
+  @apply 
+  flex 
+  items-center 
+  bg-slate-400 
+  text-white 
+  rounded-full 
+  w-[40vh]
+  sm:w-[40vw]
+  mx-auto
+  px-4
+  py-2
+}
+
+.foodh1{
+  @apply 
+  text-orange-500 
+  font-bold  
+  text-2xl 
+  capitalize 
+  text-center
+}
+
+
+
+.categoryouterdiv{
+  @apply 
+  max-w-[1640px] 
+  my-5 
+  mx-auto  
+  grid 
+  sm:grid-cols-2 
+  md:grid-cols-4
+  gap-4 
+  md:gap-6 
+  pt-4
+}
+.categoryImg{
+  @apply
+  w-full
+  h-[150px]
+  rounded-md
+  object-cover
+  mx-auto
+  shadow-lg
+
+}

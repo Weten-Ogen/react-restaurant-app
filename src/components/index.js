@@ -1,10 +1,9 @@
 import Navbar from "./Navbar";
-import Button from "./Button";
 import Hero from "./Hero";
 import SideBar from "./SideBar";
 import HeadlineCard from "./HeadlineCard";
 import Food from "./Food";
+import Category from "./Category";
 
-
-export {Navbar,Button, Hero, SideBar,HeadlineCard,Food}
+export {Navbar,Category, Hero, SideBar,HeadlineCard,Food};
 
