@@ -6,7 +6,7 @@ import {AppContext} from '../App';
 import { Link } from 'react-router-dom';
 
 const Navbar = () => {
-  const {nav, SetNav} = useContext(AppContext);
+  const {nav, SetNav,handleShow} = useContext(AppContext);
   const handleClick = () => {
     SetNav(!nav);
   }
@@ -19,35 +19,41 @@ const Navbar = () => {
               <AiOutlineMenu 
                 onClick={()=> handleClick()}
               className='hamburgerMenu'/>
-              <h1 className='hidden sm:block text-2xl capitalize text-orange-500  font-bold gap-1'>
+             <Link to='/'>
+             <h1 className='hidden sm:block text-2xl capitalize text-orange-500  font-bold gap-1 cursor-pointer'>
                 salina's
                
               </h1>
+             </Link>
             </div>
             {/* delivery icon */}
             <div className='hidden md:flex  capitalize bg-slate-400 rounded-full  overflow-hidden'>
-             <Link to='delivery'>
+             
               <p 
-              className='px-4 py-2  capitalize bg-black text-white rounded-l-full rounded-r-full'>
-                Delivery</p>
-             </Link>
-             <Link to='delivery'>
+              onClick={() => handleShow('delivery')}
+              className='px-4 py-2  capitalize bg-black text-white cursor-pointer rounded-l-full rounded-r-full'>
+                Delivery
+              </p>
               <p 
-              className='px-2 py-2 capitalize text-white'>PickUp</p>
-             </Link>
+              onClick={() => handleShow('pickup')}
+              className='px-2 py-2 capitalize text-white cursor-pointer'>PickUp
+              </p>
+             
            </div>
         </div>
         {/* Search bar */}
        <div className='searchBar'>
         <BsSearch className='mx-1'/>
         <input 
-        className='bg-slate-400 text-white outline-none'
+        className='bg-slate-400 text-white outline-none px-2'
         type="text" 
         placeholder='search'  />
        </div>
        {/* Cart icon */}
        <div className='hidden md:flex items-center bg-black text-white rounded-full gap-1 px-4 py-2  text-md'>
-       <BsCart className='text-xl '/>
+       <BsCart 
+       onClick={() => {handleShow('cart')}}
+       className='text-xl  cursor-pointer'/>
         <p className='capitalize'>cart</p>
        </div>
       {nav && <SideBar handleClick={handleClick}/>}

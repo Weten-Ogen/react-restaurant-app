@@ -1,28 +1,9 @@
-import { useState } from 'react';
-import { data } from '../data/data';
 
+import { useFilterType } from '../hooks/useFilterType';
 
 const Food = () => {
-
-  const [foods, setFoods] = useState(data);
-
-  const filterType = (category) => {
-    setFoods(data.filter(item => {
-      return item.category === category;
-    }))
-  };
-
-  const filterPrice = (price) => {
-    setFoods(data.filter(item => {
-      return item.price === price;
-    }))
-  };
-
+  const [foods, filterType,filterPrice] = useFilterType();
   
-  
-
-  
-
 
   return (
     <div className='p-4'>
@@ -32,7 +13,7 @@ const Food = () => {
       <h3 className='py-1 text-gray-900  font-bold capitalize text-md'>filter type</h3>
         <div className='max-w-[1024px] flex flex-wrap  capitalize justify-between items-center text-orange-500'>
           <button
-           onClick={()=>setFoods(data)}
+           onClick={()=> filterType('all')}
            className='foodnav'>
             all
           </button>

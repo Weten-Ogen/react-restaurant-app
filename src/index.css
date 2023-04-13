@@ -62,6 +62,37 @@ a{
   mx-auto
   px-4
   py-2
+  divide-x-2
+  divide-gray-100 
+  
+}
+.footer{
+  @apply
+  flex 
+  text-2xl 
+  h-[50px] 
+  w-full 
+  items-center 
+  gap-4 
+  justify-center 
+  text-gray-400
+}
+.herooverlay{
+  @apply
+  absolute 
+  max-h-[400px] 
+  w-full 
+  h-full 
+  text-orange-500 
+  bg-black/50 
+  text-2xl 
+  lg:text-6xl 
+  md:text-4xl 
+  capitalize 
+  flex 
+  flex-col 
+  justify-center 
+  text-center
 }
 
 .foodh1{
