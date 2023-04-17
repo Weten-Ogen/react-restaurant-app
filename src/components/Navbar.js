@@ -50,11 +50,13 @@ const Navbar = () => {
         placeholder='search'  />
        </div>
        {/* Cart icon */}
-       <div className='hidden md:flex items-center bg-black text-white rounded-full gap-1 px-4 py-2  text-md'>
-       <BsCart 
+       <div 
        onClick={() => {handleShow('cart')}}
+       className='hidden md:flex items-center bg-black text-white rounded-full gap-1 px-4 py-2  cursor-pointer text-md'>
+       <BsCart 
+       
        className='text-xl  cursor-pointer'/>
-        <p className='capitalize'>cart</p>
+        <p className='capitalize cursor-pointer'>cart</p>
        </div>
       {nav && <SideBar handleClick={handleClick}/>}
      </div>      

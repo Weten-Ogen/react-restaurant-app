@@ -94,7 +94,17 @@ a{
   justify-center 
   text-center
 }
-
+.fooditemcover{
+@apply
+  bg-black/60 
+    w-full 
+    h-full 
+    absolute 
+    flex 
+    rounded-md 
+    items-center 
+    justify-center 
+}
 .foodh1{
   @apply 
   text-orange-500 
@@ -104,6 +114,20 @@ a{
   text-center
 }
 
+.cartNoItemDiv{
+@apply
+  capitalize 
+  flex 
+  items-center 
+  justify-center 
+  mt-10 text-3xl 
+  border 
+  rounded-lg 
+  p-4 
+  text-slate-600 
+  border-gray-700
+
+}
 
 
 .categoryouterdiv{
@@ -127,4 +151,18 @@ a{
   mx-auto
   shadow-lg
 
+}
+.cartbtn{
+  @apply 
+    block  
+  bg-orange-600 
+    outline-none
+    text-white 
+    text-2xl 
+    uppercase p-2 
+    hover:bg-orange-500 
+    transform hover:scale-y-125 
+    rounded-md 
+    w-full 
+    object-cover
 }

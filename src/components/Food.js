@@ -1,9 +1,11 @@
-
+import { FaCartPlus } from 'react-icons/fa';
 import { useFilterType } from '../hooks/useFilterType';
+import { useCart } from '../hooks/useCart';
+
 
 const Food = () => {
   const [foods, filterType,filterPrice] = useFilterType();
-  
+  const [cart ,addItem, removeItem] = useCart();
 
   return (
     <div className='p-4'>
@@ -75,7 +77,13 @@ const Food = () => {
           foods.map((item,index) => {
             return(
                 <div key={index}  
-                className='border mx-auto shadow-lg hover:scale-105 rounded-lg duration-300 transition ease-out'>
+                className='border shadow-lg hover:scale-105 rounded-lg duration-300 h-[300px] w-[300px] transition ease-out relative '>
+                  <div className='fooditemcover'>
+                    <FaCartPlus
+                    onClick={() => addItem(item.id)}
+                     className='text-3xl hover:text-orange-400 text-orange-500 transform hover:scale-125
+                     transition ease-out duration-100 cursor-pointer'/>
+                  </div>
                   <img  
                   className='w-full h-[200px] object-cover rounded-t-lg '
                   src={item.image} 
